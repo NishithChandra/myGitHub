@@ -9,7 +9,6 @@ class App extends Component{
         this.state = {
             username: 'bradtraversy',
             userData: [],
-            data:[1,23,54566,65564],
             userRepos: [],
             perPage: 10
         }
