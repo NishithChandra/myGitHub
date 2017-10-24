@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import ReactDOM  from 'react-dom';
+import RepoList from './RepoList.jsx';
 
 class Profile extends Component{
 
@@ -27,7 +27,7 @@ class Profile extends Component{
                             <div className="row">
                                 <div className="col-md-12">
                                     <ul className="list-group">
-                                        <li className="list-group-item"><strong>Username: </strong> {this.props.userData.name}</li>
+                                        <li className="list-group-item"><strong>Username: </strong> {this.props.userData.login}</li>
                                         <li className="list-group-item"><strong>Location: </strong> {this.props.userData.location}</li>
                                         <li className="list-group-item"><strong>Email Address: </strong> {this.props.userData.email}</li>
                                     </ul>
@@ -37,6 +37,9 @@ class Profile extends Component{
                             <a className="btn btn-primary" target="_blank" href={this.props.userData.html_url}>Visit Profile</a>
                         </div>
                     </div>
+                    <hr/>
+                    <h3>User Repositories</h3>
+                    <RepoList userRepos={this.props.userRepos}/>
                 </div>
             </div>
         )
